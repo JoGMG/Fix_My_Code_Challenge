@@ -4,7 +4,7 @@ User class
 """
 
 
-class User():
+class User:
     """ Defines a class - User """
 
     def __init__(self):
