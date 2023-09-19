@@ -1,23 +1,30 @@
 #!/usr/bin/python3
-""" Square class """
+"""
+Square class
+"""
 
 
 class Square():
-    """ Defines a class - Square """
+    """
+    Defines a class - Square
+    - Attributes:
+        -   width:  width of square
+        -   height: height of square
+    """
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """ Initializes Square class attributes """
+        """ Sets Square attributes with values"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """ Returns the area of Square """
+        """ Returns Area of Square """
         return self.width * self.height
 
     def PerimeterOfMySquare(self):
-        """ Returns the perimeter of Square """
+        """ Returns Perimeter of Square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
