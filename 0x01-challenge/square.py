@@ -2,7 +2,7 @@
 """ Square class """
 
 
-class Square:
+class Square():
     """ Defines a class - Square """
     width = 0
     height = 0
@@ -18,7 +18,7 @@ class Square:
 
     def PerimeterOfMySquare(self):
         """ Returns the perimeter of Square """
-        return 2 * (self.width + self.height)
+        return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
         """ Returns the String representation of Square """
