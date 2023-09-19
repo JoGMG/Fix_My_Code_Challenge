@@ -1,40 +1,54 @@
 #!/usr/bin/python3
-"""
-Square class
-"""
 
-
-class Square():
+class Square:
     """
-    Defines a class - Square
-    - Attributes:
-        -   width:  width of square
-        -   height: height of square
+    A class representing a square shape.
+    
+    Attributes:
+    - width: The width of the square.
+    - height: The height of the square.
     """
-    width = 0
-    height = 0
 
-    def __init__(self, *args, **kwargs):
-        """ Sets Square attributes with values"""
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+    def __init__(self, width=0, height=0):
+        """
+        Initializes a square with the given width and height.
+        
+        Args:
+        - width: The width of the square.
+        - height: The height of the square.
+        """
+        self.width = width
+        self.height = height
 
     def area_of_my_square(self):
-        """ Returns Area of Square """
+        """
+        Calculates the area of the square.
+        
+        Returns:
+        The area of the square.
+        """
         return self.width * self.height
 
-    def PerimeterOfMySquare(self):
-        """ Returns Perimeter of Square """
+    def perimeter_of_my_square(self):
+        """
+        Calculates the perimeter of the square.
+        
+        Returns:
+        The perimeter of the square.
+        """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ Returns the String representation of Square """
+        """
+        Returns a string representation of the square.
+        
+        Returns:
+        A string representation of the square in the format 'width/height'.
+        """
         return "{}/{}".format(self.width, self.height)
 
-
 if __name__ == "__main__":
-
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PerimeterOfMySquare())
+    print(s.perimeter_of_my_square())
