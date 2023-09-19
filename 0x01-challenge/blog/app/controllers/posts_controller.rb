@@ -30,10 +30,10 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
 
-    if @post.update(params[:post].permit(:title, :body))
+    if @post.update(post_params)
       redirect_to @post
     else
-      render 'edit'
+      render 'edit
     end
   end
 
@@ -45,7 +45,8 @@ class PostsController < ApplicationController
   end
 
   private
-    def post_params
-      params.require(:post).permit(:title, :body)
-    end
+  
+  def post_params
+    params.require(:post).permit(:title, :body, :online)
+  end
 end
