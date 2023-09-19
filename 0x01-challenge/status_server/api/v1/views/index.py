@@ -2,6 +2,7 @@
 """ Index view
 """
 from flask import jsonify
+
 from status_server.api.v1.views import app_views
 
 
