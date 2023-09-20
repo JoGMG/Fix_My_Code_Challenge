@@ -15,7 +15,7 @@ class Square():
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """ Sets Square attributes with values"""
+        """ Sets Square attributes with a value """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
